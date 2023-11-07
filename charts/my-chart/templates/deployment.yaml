@@ -1,5 +1,10 @@
 apiVersion: apps/v1
 kind: Deployment
+  {{ .Values.customblock.author.name | default "hi, I am not null"}}
+  {{ .Values.customblock.author.names | default "hi i am not null"}}
+  {{ .Values.customblock.author.name | default "hi i am" | upper}}
+  {{ .Values.customblock.author.name | default "hi i am" | upper | quote}}
+  
 metadata:
   name: {{ include "my_chart.fullname" . }}
   labels:
