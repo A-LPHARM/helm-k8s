@@ -104,3 +104,20 @@ nodeSelector: {}
 tolerations: []
 
 affinity: {}
+
+
+mysql:
+  enabled : true
+  auth:
+    rootPassword: "admin"
+    createDatabase: true
+    database: "my_database"
+    username: "henry"
+    password: "admin123"
+  primary:
+    service:
+      type: LoadBalancer
+
+
+rabbitmq: 
+  enabled: true
