@@ -1,15 +1,5 @@
-apiVersion: apps/v1
+piVersion: apps/v1
 kind: Deployment
-  {{ .Values.customblock.author.name | default "hi, I am not null"}}
-  {{ .Values.customblock.author.names | default "hi i am not null"}}
-  {{ .Values.customblock.author.name | default "hi i am" | upper}}
-  {{ .Values.customblock.author.name | default "hi i am" | upper | quote}}
-  {{ $myvar := .Values.autoscaling.enabled }}
-  {{- if $myvar }}
-  {{"hi i am the variable true" | nindent 4 }}
-  {{- else }}
-  {{"i am with variable False" | nindent 4 }}
-  {{- end }}
 metadata:
   name: {{ include "my_chart.fullname" . }}
   labels:
